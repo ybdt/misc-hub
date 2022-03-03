@@ -9,7 +9,8 @@
 ```
 0x03-子域
 ```
-通过OneForAll等工具收集子域
+通过OneForAll收集子域：https://github.com/shmilylty/OneForAll
+通过esd收集子域：https://github.com/FeeiCN/ESD
 ```
 0x04-C段
 ```
