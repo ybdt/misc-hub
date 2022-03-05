@@ -31,6 +31,8 @@ fofa收集目标子域，通过查看子域对应IP，可得知目标的大概C�
 
 ```
 https://github.com/r0eXpeR/GetInfo
+https://github.com/projectdiscovery/uncover -- 包含fofa、shodan、censys
+https://github.com/ExpLangcn/WanLi -- 包含fofa、quake
 ```
 ### 0x02-指纹识别
 ```
