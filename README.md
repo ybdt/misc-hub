@@ -28,6 +28,14 @@ fofa收集目标子域，通过查看子域对应IP，可得知目标的大概C�
 ```
 通过ip138.com查看目标域名解析过的历史IP
 ```
+0x08-Google Dork
+```
+google dork:
+https://blog.csdn.net/u014565127/article/details/53842885
+https://blog.csdn.net/u014565127/article/details/53868443
+allintitle:毕节 电网 系统
+program site:google.com
+```
 
 ```
 https://github.com/r0eXpeR/GetInfo
