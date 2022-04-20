@@ -1,4 +1,5 @@
-# 0x01-指纹识别
+# 0x01-手动识别指纹
+
 ## 01-在线指纹识别平台
 ```
 http://whatweb.bugscaner.com/look/
@@ -8,7 +9,16 @@ https://scan.top15.cn/web/
 https://fp.shuziguanxing.com/#/
 ```
 
-# 0x02-同类项目
+
+
+# 0x02-自动化识别指纹
+```
+https://github.com/EASY233/Finger
+```
+
+
+
+# 0x02-优秀项目
 ```
 https://github.com/ShiHuang-ESec/EHole
 https://github.com/EdgeSecurityTeam/EHole
