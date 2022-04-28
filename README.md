@@ -4,12 +4,10 @@
 # 0x02-免责声明
 该项目仅供授权下使用，禁止使用该项目进行违法操作，否则自行承担后果，请各位遵守《中华人民共和国网络安全法》！！！
 
+# 0x03-收集资产--手动
 ```
 先收集离目标最近的资产，目的是快速打下比较正的点，实在没点可打，再逐渐扩大范围
 ```
-
-# 0x03-收集资产--手动
-
 ## 01-旁站收集
 ```
 先通过本地ping及多地ping判断目标是否使用CDN
@@ -66,25 +64,23 @@ program site:google.com
 https://blog.csdn.net/u014565127/article/details/53842885
 https://blog.csdn.net/u014565127/article/details/53868443
 ```
-
 # 0x04-收集资产--自动化
-
-## 01-水泽
+```
+01-水泽
 地址：https://github.com/0x727/ShuiZe_0x727
 
-## 02-灯塔
+02-灯塔
 地址：https://github.com/TophantTechnology/ARL
 
-## 03-Kunyu
+03-Kunyu
 地址：https://github.com/knownsec/Kunyu
-
+```
 # 0x05-资产收集--优秀项目
 ```
 https://github.com/r0eXpeR/GetInfo
 https://github.com/projectdiscovery/uncover -- 包含fofa、shodan、censys
 https://github.com/ExpLangcn/WanLi -- 包含fofa、quake
 ```
-
 # 0x06-指纹识别-手动
 ```
 http://whatweb.bugscaner.com/look/
@@ -93,12 +89,10 @@ http://finger.tidesec.com/
 https://scan.top15.cn/web/
 https://fp.shuziguanxing.com/#/
 ```
-
 # 0x07-指纹识别--自动化
 ```
 https://github.com/EASY233/Finger
 ```
-
 # 0x08-指纹识别--优秀项目
 ```
 https://github.com/ShiHuang-ESec/EHole
