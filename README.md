@@ -30,7 +30,7 @@ HW比拼的一个维度就是速度，看谁先发现弱资产，所以自动化
 02-通过ENScan_GO自动化收集供应链相关信息：https://github.com/wgpsec/ENScan_GO
 ```
 
-# 奇技淫巧
+# 05-奇技淫巧
 01-历史IP收集：通过ip138.com查看目标域名解析过的历史IP  
 02-ASN收集：当目标组织很大时，可考虑收集目标所在ASN的全部资产  
 03-Google Dork收集：收集目标相关的关键字，通过google dork收集目标关联资产  
