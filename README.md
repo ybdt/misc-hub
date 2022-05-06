@@ -27,7 +27,7 @@ HW比拼的一个维度就是速度，看谁先发现弱资产，所以自动化
 ```
 # 04-子公司-兄弟公司-父公司-供应商
 ```
-02-通过ENScan_GO自动化收集供应链信息：https://github.com/wgpsec/ENScan_GO
+02-通过ENScan_GO自动化收集供应链相关信息：https://github.com/wgpsec/ENScan_GO
 ```
 
 # 奇技淫巧
