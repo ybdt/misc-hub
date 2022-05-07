@@ -15,7 +15,7 @@ HW比拼的一个维度就是速度，看谁先发现弱资产，所以自动化
 
 02-通过OneForAll收集子域：https://github.com/shmilylty/OneForAll
 ```
-# 02-Web目录
+# 02-Web路径
 ```
 01-通过dirsearch扫描Web目录：https://github.com/maurosoria/dirsearch
 
