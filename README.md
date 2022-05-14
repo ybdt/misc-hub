@@ -57,3 +57,51 @@ HW比拼的一个维度就是速度，看谁先发现弱资产，所以自动化
 
 06-WanLi：https://github.com/ExpLangcn/WanLi -- 包含fofa、quake
 ```
+
+# todo-list
+```
+将团队内部指纹库、开源的指纹库、自动化指纹识别工具内的指纹库做一个汇总
+```
+
+# 闲言碎语
+很多时候收集到有效资产但不能识别到对应指纹，其实跟没收集到资产效果是一样的，所以指纹识别很重要
+
+# 01-指纹识别
+```
+使用团队内部开发的自动化指纹识别工具
+```
+
+# 在线指纹识别网站
+```
+01-whatweb：http://whatweb.bugscaner.com/look/
+
+02-云悉：https://www.yunsee.cn/
+
+03-TideSec：http://finger.tidesec.com/
+
+04-360Finger-P：https://fp.shuziguanxing.com
+```
+
+# 自动化指纹识别项目
+```
+01-Finger：https://github.com/EASY233/Finger
+
+02-dismap：https://github.com/zhzyker/dismap
+
+03-httpx：https://github.com/projectdiscovery/httpx
+
+04-AlliN：https://github.com/P1-Team/AlliN
+
+05-ObserverWard：https://github.com/0x727/ObserverWard
+```
+
+# 指纹库项目
+```
+01-EHole(棱洞)：https://github.com/ShiHuang-ESec/EHole
+
+02-EHole(棱洞)3.0：https://github.com/EdgeSecurityTeam/EHole
+
+03-whatweb-plus：https://github.com/winezer0/whatweb-plus
+
+04-fingerprint：https://github.com/r0eXpeR/fingerprint
+```
