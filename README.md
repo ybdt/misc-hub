@@ -2,7 +2,7 @@
 基本思路：目标单位根域名及100%控股子公司根域名 -> 子域名 -> ip全端口 -> 连续ip -> web爬虫及web路径
 
 ### 根域名
-可调用enscan（https://github.com/wgpsec/ENScan_GO）自动化收集“目标单位根域名及100%控股子公司根域名”
+可调用[enscan](https://github.com/wgpsec/ENScan_GO)自动化收集“目标单位根域名及100%控股子公司根域名”
 ### 子域名
 子域名的收集分两个方向：通过各类接口（如：fofa）或爆破子域名，我这边是用python实现调用fofa、hunter、quake，后测试发现quake比较坑，就把quake去掉了，再后来将oneforall加进来，oneforall包含了大量接口（需要配置好api）以及自带masscan爆破子域名，此时通过接口收集以及通过爆破收集，我们都用到了
 ### ip全端口
@@ -67,6 +67,6 @@ def ipSerial(ip_list):
 ```
 此时收集到相对较全的ip，对每个ip查询全端口，这里调用nmap查询全端口会比较慢，可以先调用空间测绘查询ip全端口，最后将端口和ip结合，重新构造url
 ### web爬虫及web路径
-最后，对每个url进行网站爬取及web路径爆破，网站爬取推荐crawlergo，web路径爆破推荐dirsearch
+最后，对每个url进行网站爬取及web路径爆破，网站爬取推荐[crawlergo](https://github.com/Qianlitp/crawlergo)，web路径爆破推荐[dirsearch](https://github.com/maurosoria/dirsearch)
 
 ### 通过python，将上述过程实现自动化，就是一个自动化资产收集工具
