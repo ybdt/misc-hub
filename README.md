@@ -14,3 +14,10 @@
 ```
 一款适用于红蓝对抗中的仿真钓鱼系统：https://github.com/xiecat/goblin
 ```
+
+# 邮箱收集
+```
+hunter.io
+https://phonebook.cz/
+https://maimai.cn/
+```
