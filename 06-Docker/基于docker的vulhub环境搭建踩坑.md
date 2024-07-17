@@ -34,6 +34,19 @@ docker compose build
 # Run environment
 docker compose up -d
 ```
+提示version那一行语法有误，解决办法，移除version那行
+
+参考：  
+https://github.com/mailcow/mailcow-dockerized/issues/5797  
+
+### 坑5
+```
+# Compile environment
+docker compose build
+
+# Run environment
+docker compose up -d
+```
 拉取镜像失败，解决办法：  
 01 touch /etc/docker/daemon.json并粘贴阿里云的docker镜像源，还是拉取镜像失败  
 02 修改/etc/resolv.conf中的DNS为8.8.4.4，清理DNS缓存，使用dig测试，还是拉取镜像失败  
