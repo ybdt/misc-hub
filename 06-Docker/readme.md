@@ -1,9 +1,16 @@
 # docker代理问题
 之前一直通过docker镜像解决此问题，2024.06月份开始，国内很多docker镜像宣布不能访问，改用配置代理的方式，但是docker pull需要配置代理，docker build还需要配置代理，多容器应用使用docker-compose管理，docker-compose还需要配置代理，docker-compose配置代理还一直失败，干脆还是用镜像解决此问题吧，经测试阿里云镜像依旧可用
 ```
-https://bbj143ni.mirror.aliyuncs.com
-https://hub-mirror.c.163.com
-https://mirror.baidubce.com
+vim /etc/docker/daemon.json
+
+{
+  "registry-mirrors": [
+    "https://xxx.mirror.aliyuncs.com",
+    "https://hub-mirror.c.163.com",
+    "https://mirror.baidubce.com"
+  ]
+}
+
 ```
 
 ### 01-docker部署CTF题目
