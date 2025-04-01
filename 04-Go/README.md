@@ -1,13 +1,8 @@
-下载并安装goland 2021.1.3（使用版本2021.1.3是因为下面的无限试用要求这个版本）：https://www.jetbrains.com/go/download/other.html  
-goland 2021.1.3无限试用方式：https://github.com/ybdt/audit-hub/tree/main/如何放心的白嫖四大主流语言IDE  
-
-Mac 12.6
+# 安装
+## Mac 15.3.2下安装
 ```
-# 下载安装
-下载地址：https://go.dev/dl/go1.17.13.darwin-amd64.pkg
-下载后，双击启动安装器，按提示操作即可
-安装器默认会将go安装到/usr/local/go
-（之前用的版本是go 1.18，但是goland 2021.1.3结合go 1.18会有一些红线提醒，强迫症的我接受不了，查阅资料后发现是goland和go版本不匹配问题，降级到go 1.17再结合goland 2021.1.3后，问题解决）
+https://go.dev/dl/go1.22.12.darwin-amd64.pkg
+通过安装包安装，默认安装路径：/usr/local/go
 
 # 配置环境变量
 在~/.zshrc中添加
@@ -19,16 +14,12 @@ export PATH=$PATH:$GOROOT/bin
 # 卸载go
 sudo rm -rf /usr/local/go
 sudo rm /etc/paths.d/go
-参考文章：
-https://blog.csdn.net/weixin_36908494/article/details/126096277
-https://blog.csdn.net/aaaadong/article/details/100728716
 ```
 
-Win10
+## Win10下安装
 ```
-# 下载安装
-下载地址：https://dl.google.com/go/go1.17.13.windows-amd64.msi
-下载后，双击启动安装器，按提示操作即可
+https://go.dev/dl/go1.22.12.windows-amd64.msi
+通过安装包安装，默认安装路径：C:\Program Files\Go
 
 # 配置环境变量
 GOROOT=C:\Program Files\Go
@@ -38,27 +29,26 @@ GOPROXY=https://goproxy.cn,direct
 
 # 卸载go
 通过win10的应用和功能卸载即可
-参考文章：
-https://zhuanlan.zhihu.com/p/455761556
 ```
 
-Ubuntu 18.04
+## Ubuntu 18.04
 ```
-下载go 1.18系列：
-wget https://go.dev/dl/go1.18.10.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.22.12.linux-amd64.tar.gz
+tar xvf go1.22.12.linux-amd64.tar.gz
+mv ./go /usr/local
 
-解压缩并移动到/usr/local下：
-tar xvf go1.18.10.linux-amd64.tar.gz && mv go /usr/local/
-
-创建GOPATH目录并在~/.bashrc下配置4个环境变量
-mkdir /root/go
+# 配置环境变量
+mkdir $HOME/go
 export GOROOT=/usr/local/go
-export GOPATH=/root/go
+export GOPATH=$HOME/go
 export GOPROXY="https://goproxy.cn,direct"
 export PATH=$GOROOT/bin:$PATH
+
+# 卸载go
+sudo rm -rf /usr/local/go
 ```
 
-GO111MODULE解释
+## GO111MODULE解释
 ```
 GO111MODULE环境变量主要是用来开启或关闭模块支持的。
 
@@ -84,4 +74,53 @@ go env -u GO111MODULE
 在Go语言 1.12 版本之前，要启用 go module 工具首先要设置环境变量 GO111MODULE，不过在Go语言 1.13 及以后的版本则不再需要设置该环境变量。
 
 【2021.5.8号修订】从 Go 1.16版本开始，默认启用modules，这在1.15的时候已经预告过了。现在GO111MODULE的默认值为on。在Go 1.17版本中这个环境变量将会被删除。
+```
+
+# 跨平台编译
+```
+go tool dist list # 查看支持哪些系统和架构
+-ldflags "-s -w" # 用于缩小体积
+```
+
+## Windows下编译
+cmd下一行编译会报错”go: unsupported GOOS/GOARCH pair linux /386“，可能需要多行执行，没有powershell方便
+```
+# 编译windows下x86架构64位可执行文件
+$Env:GOOS = "windows"; $Env:GOARCH = "amd64"; go build -ldflags "-s -w" -o windows-amd64.exe main.go
+
+# 编译windows下x86架构32位可执行文件
+$Env:GOOS = "windows"; $Env:GOARCH = "386"; go build -ldflags "-s -w" -o windows-386.exe main.go
+
+# 编译linux下x86架构64位可执行文件
+$Env:GOOS = "linux"; $Env:GOARCH = "amd64"; go build -ldflags "-s -w" -o linux-amd64 main.go
+
+# 编译linux下x86架构32位可执行文件
+$Env:GOOS = "linux"; $Env:GOARCH = "386"; go build -ldflags "-s -w" -o linux-386 main.go
+
+# 编译macOS下x86架构64位可执行文件
+$Env:GOOS = "darwin"; $Env:GOARCH = "amd64"; go build -ldflags "-s -w" -o darwin-amd64 main.go
+
+# 编译macOS下arm架构64位可执行文件
+$Env:GOOS = "darwin"; $Env:GOARCH = "arm64"; go build -ldflags "-s -w" -o darwin-arm64 main.go
+```
+
+# Linux下编译
+```
+# 编译windows下x86架构64位可执行文件
+env GOOS=windows GOARCH=amd64 go build -ldflags "-s -w" -o windows-amd64.exe main.go
+
+# 编译windows下x86架构32位可执行文件
+env GOOS=windows GOARCH=386 go build -ldflags "-s -w" -o windows-386.exe main.go
+
+# 编译linux下x86架构64位可执行文件
+env GOOS=linux GOARCH=amd64 go build -ldflags "-s -w" -o linux-amd64 main.go
+
+# 编译linux下x86架构32位可执行文件
+env GOOS=linux GOARCH=386 go build -ldflags "-s -w" -o linux-386 main.go
+
+# 编译macOS下x86架构64位可执行文件
+env GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w" -o darwin-amd64 main.go
+
+# 编译macOS下arm架构64位可执行文件
+env GOOS=darwin GOARCH=arm64 go build -ldflags "-s -w" -o darwin-arm64 main.go
 ```
