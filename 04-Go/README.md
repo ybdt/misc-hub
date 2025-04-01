@@ -1,5 +1,5 @@
 # 安装
-## Mac 15.3.2下安装
+## macOS 15.3.2下安装
 ```
 https://go.dev/dl/go1.22.12.darwin-amd64.pkg
 通过安装包安装，默认安装路径：/usr/local/go
@@ -31,7 +31,7 @@ GOPROXY=https://goproxy.cn,direct
 通过win10的应用和功能卸载即可
 ```
 
-## Ubuntu 18.04
+## Ubuntu 18.04下安装
 ```
 wget https://go.dev/dl/go1.22.12.linux-amd64.tar.gz
 tar xvf go1.22.12.linux-amd64.tar.gz
